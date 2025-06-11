@@ -4,8 +4,8 @@ library(evd)
 
 N_obs <- 40
 
-N_sim <- 500
-P_sim <- 20
+N_sim <- 200
+P_sim <- 40
 
 mu_true <- 5
 sigma_true <- 2

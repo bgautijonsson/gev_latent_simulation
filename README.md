@@ -87,9 +87,3 @@ source("run_sim.R")
    X_ij ~ GEV(μ_sim[j], σ_true, ξ_true)
    μ_sim[j] = α_sim + β_sim × μ_true + σ_sim × z_j
    ```
-
-3. **Priors**:
-   - `α_sim ~ Normal(0, 1)`
-   - `β_sim ~ Normal(0, 1)` 
-   - `σ_sim ~ Normal(0, 1)`
-

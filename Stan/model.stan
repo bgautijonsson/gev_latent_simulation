@@ -52,10 +52,6 @@ model {
       target += gev_lpdf(X[i, j] | mu_sim[j], sigma_true, xi_true);
     }
   }
-
-  alpha_sim ~ normal(0, 1);
-  beta_sim ~ normal(0, 1);
-  sigma_sim ~ normal(0, 1);
 }
 
 

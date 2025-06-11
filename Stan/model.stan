@@ -17,11 +17,11 @@ functions {
 }
 
 data {
-  int<lower = 1> N_obs;
-  vector[N_obs] y;
-  int<lower = 1> N_sim;
-  int<lower = 1> P_sim;
-  matrix[N_sim, P_sim] X;
+  int<lower = 1> N_obs; // number of observations
+  vector[N_obs] y; // observations
+  int<lower = 1> N_sim; // number of simulations per model
+  int<lower = 1> P_sim; // number of models
+  matrix[N_sim, P_sim] X; // simulations
 }
 
 parameters {
@@ -52,6 +52,10 @@ model {
       target += gev_lpdf(X[i, j] | mu_sim[j], sigma_true, xi_true);
     }
   }
+
+  alpha_sim ~ normal(mu_true, 2);
+  beta_sim ~ normal(0, 1);
+  sigma_sim ~ exponential(1);
 }
 
 

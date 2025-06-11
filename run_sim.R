@@ -4,7 +4,7 @@ library(evd)
 
 N_obs <- 40
 
-N_sim <- 100
+N_sim <- 500
 P_sim <- 20
 
 mu_true <- 5
@@ -13,7 +13,7 @@ xi_true <- 0.1
 
 y <- rgev(N_obs, mu_true, sigma_true, xi_true)
 
-alpha_sim <- 3
+alpha_sim <- 8
 beta_sim <- 0.2
 sigma_sim <- 0.2
 
